@@ -1,0 +1,32 @@
+.#{$namespace}btn {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  height: auto;
+  line-height: 1.125rem;
+  margin: 0;
+  padding: ($space-1 * 0.5);
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.#{$namespace}btn:hover {
+  text-decoration: none;
+}
+
+.#{$namespace}btn:focus {
+  border-color: $darken-2;
+  box-shadow: 0 0 0 3px $darken-3;
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}

@@ -1,0 +1,12 @@
+.#{$theme} {
+  .#{$namespace}carousel {
+    .slide {
+      .contents {
+        button {
+          background: $snow;
+          color: $sky;
+        }
+      }
+    }
+  }
+}

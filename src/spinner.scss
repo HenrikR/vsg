@@ -1,0 +1,37 @@
+$speed: 0.7s;
+$size: 2.5rem;
+
+.#{$namespace}spinner-container {
+  display: block;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.#{$namespace}spinner {
+  display: block;
+  height: $size;
+  margin: 0.5rem auto;
+  position: relative;
+  width: $size;
+
+  &::before,
+  &::after {
+    -webkit-animation: bounce $speed ease-in-out infinite alternate-reverse;
+    animation: bounce $speed ease-in-out infinite alternate-reverse;
+    background: $sky;
+    border-radius: 50%;
+    content: ' ';
+    display: block;
+    height: 100%;
+    opacity: 0.7;
+    transform: scale(0);
+    width: 100%;
+  }
+
+  &::after {
+    animation-delay: -($speed);
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}

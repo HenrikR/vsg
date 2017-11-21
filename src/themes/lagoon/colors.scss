@@ -1,0 +1,6 @@
+.#{$theme} {
+  .#{$namespace}sky { color: $sky; }
+  .#{$namespace}b-sky { border-color: $sky; }
+  .#{$namespace}bg-sky { background-color: $sky; }
+  .#{$namespace}fill-sky { fill: $sky; }
+}

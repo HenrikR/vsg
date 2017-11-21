@@ -1,0 +1,11 @@
+.git/
+.env
+.idea
+.DS_Store
+Thumbs.db
+tmp
+node_modules/
+bower_components/
+tests-results/
+!.gitkeep
+docs/css/

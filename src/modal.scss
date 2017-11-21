@@ -1,0 +1,105 @@
+// ngdialog
+.ngdialog {
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 4;
+
+  &.ngdialog-closing .ngdialog-overlay {
+    -webkit-backface-visibility: hidden;
+  }
+
+  &.ngdialog-closing .ngdialog-content {
+    -webkit-backface-visibility: hidden;
+  }
+
+  // theme: v-modal
+  &.#{$namespace}modal {
+    z-index: 10000; // FIXME: workaround to appear above 'sticky' elements on the event page
+
+    .ngdialog-content {
+      -webkit-animation: slide-down 0.5s;
+      animation: slide-down 0.5s;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .ngdialog-overlay {
+      -webkit-animation: fade-in 0.5s;
+      animation: fade-in 0.5s;
+      background: $snow;
+      z-index: 1;
+    }
+
+    .ngdialog-close {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      &::before {
+        color: $fog;
+        content: '\00D7';
+        font-size: 40px;
+        font-weight: 300;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        width: 20px;
+      }
+
+      &:hover::before,
+      &:active::before {
+        color: $cloud;
+      }
+    }
+  }
+}
+
+.ngdialog-overlay {
+  -webkit-backface-visibility: hidden;
+  background: $darken-4;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.ngdialog-no-overlay {
+  pointer-events: none;
+}
+
+.ngdialog-content {
+  -webkit-backface-visibility: hidden;
+  pointer-events: all;
+}
+
+.ngdialog-close {
+  background: none;
+  border: 0;
+  cursor: pointer;
+
+  &::before {
+    content: '\00D7';
+  }
+}
+
+.ngdialog-open {
+  overflow: hidden;
+}
+
+@media (min-width: $tablet) {
+  .ngdialog {
+    &.#{$namespace}modal {
+      .ngdialog-overlay {
+        background: $darken-4;
+      }
+    }
+  }
+}

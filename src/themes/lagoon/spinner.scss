@@ -1,0 +1,8 @@
+.#{$theme} {
+  .#{$namespace}spinner {
+    &::before,
+    &::after {
+      background-color: $sky;
+    }
+  }
+}

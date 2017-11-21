@@ -1,0 +1,41 @@
+linters:
+
+  ChainedClasses:
+    enabled: true
+
+  Comment:
+    enabled: false
+
+  DisableLinterReason:
+    enabled: true
+
+  ElsePlacement:
+    enabled: true
+    style: new_line
+
+  ImportantRule:
+    enabled: false
+
+  LeadingZero:
+    style: include_zero
+
+  NameFormat:
+    allow_leading_underscore: false
+
+  NestingDepth:
+    enabled: false
+
+  PlaceholderInExtend:
+    enabled: false
+
+  PropertyUnits:
+    global: ['px', 'em', 'rem', '%', 's', 'ms', 'vw', 'vh']
+
+  SelectorDepth:
+    enabled: false
+
+  Shorthand:
+    enabled: false
+
+  VendorPrefix:
+    enabled: false

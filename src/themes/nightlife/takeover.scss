@@ -1,0 +1,9 @@
+.#{$theme} {
+  .#{$namespace}takeover {
+    .#{$namespace}takeover-content {
+      .vnd-search-bar input {
+        background: mix($haze, $snow, 20%);
+      }
+    }
+  }
+}

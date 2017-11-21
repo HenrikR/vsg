@@ -1,0 +1,311 @@
+.#{$namespace}carousel {
+  background: $smoke;
+  height: 13.75rem;
+  overflow: hidden;
+  position: relative;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+  z-index: 1;
+
+  // slide
+  .slide {
+    background: 50% 50% no-repeat;
+    background-color: $smoke;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    -webkit-user-drag: none;
+    width: 100%;
+
+    // slide contents and caption
+    .contents {
+      display: table;
+      height: 100%;
+      padding-left: 50%;
+      text-transform: uppercase;
+      -webkit-user-drag: none;
+      width: 100%;
+
+      .caption {
+        display: table-cell;
+        padding: 0 0.625rem 0 1.875rem;
+        vertical-align: middle;
+
+        h4 {
+          color: $snow;
+          display: block;
+          font-size: 1rem;
+          line-height: 1.2;
+          margin: 0 0 $space-1 0;
+        }
+
+        p {
+          color: $snow;
+          display: block;
+          font-size: 0.75rem;
+          font-weight: 600;
+          line-height: 1.2;
+          margin: 0 0 1em 0;
+        }
+
+        button {
+          background: $snow;
+          border: 0;
+          color: $sky;
+          font-size: 0.8125rem;
+          font-weight: bold;
+          margin: 0;
+          padding: $space-1 $space-2;
+          text-transform: uppercase;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    // slide animation
+    &.ng-animate {
+      -webkit-backface-visibility: hidden;
+      -webkit-perspective: 1000px;
+      transition: 0.5s transform ease-in-out;
+      will-change: transform;
+    }
+
+    // slide animation - sliding left
+    // sliding in
+    &.ng-hide-remove {
+      transform: translate3d(100%, 0, 0);
+      z-index: 1;
+    }
+
+    &.ng-hide-remove-active {
+      transform: translate3d(0, 0, 0);
+    }
+
+    // sliding out
+    &.ng-hide-add {
+      transform: translate3d(0, 0, 0) scale(1);
+      z-index: 0;
+    }
+
+    &.ng-hide-add-active {
+      transform: translate3d(-5%, 0, 0) scale(0.95);
+    }
+  }
+
+  // slide animation - sliding right
+  &.sliding-right {
+    .slide {
+      // sliding in
+      &.ng-hide-remove {
+        transform: translate3d(-10%, 0, 0) scale(0.95);
+        z-index: 0;
+      }
+
+      &.ng-hide-remove-active {
+        transform: translate3d(0, 0, 0);
+      }
+
+      // sliding out
+      &.ng-hide-add {
+        transform: translate3d(0, 0, 0) scale(1);
+        z-index: 1;
+      }
+
+      &.ng-hide-add-active {
+        transform: translate3d(100%, 0, 0);
+      }
+    }
+  }
+
+  .arrow {
+    background: $snow;
+    border: 0.25rem solid $snow;
+    border-radius: 50%;
+    display: none;
+    height: 2.5rem;
+    margin-top: -1.25rem;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -5rem;
+    top: 50%;
+    transition: 0.25s opacity linear;
+    width: 2.5rem;
+    will-change: opacity;
+    z-index: 2;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::after {
+      border-radius: 0.1875rem;
+      border-right: 0.25rem solid $smoke;
+      border-top: 0.25rem solid $smoke;
+      content: ' ';
+      display: block;
+      height: 50%;
+      left: 25%;
+      padding: 0;
+      position: absolute;
+      top: 25%;
+      width: 50%;
+    }
+
+    &.prev {
+      left: 1.25rem;
+
+      &::after {
+        margin-left: 0.125rem;
+        transform: rotate(225deg);
+      }
+    }
+
+    &.next {
+      right: 1.25rem;
+
+      &::after {
+        margin-left: -0.125rem;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .nav {
+    bottom: 0.625rem;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    z-index: 2;
+
+    .item {
+      background: none;
+      border: 0;
+      display: inline-block;
+      font-size: 0;
+      overflow: hidden;
+      padding: 0 0.3125rem;
+      width: 2.5rem;
+
+      &:focus {
+        outline: none;
+      }
+
+      span {
+        background: $smoke;
+        display: block;
+        height: 0.125rem;
+        opacity: 0.5;
+        text-indent: -2.5rem;
+        transition: 0.5s opacity linear, 0.5s background linear;
+        width: 100%;
+        will-change: opacity, background;
+      }
+
+      &.active {
+        span {
+          background: $snow;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $tablet) {
+    height: 24.375rem;
+
+    .slide {
+      .contents {
+        .caption {
+          padding: 0 2.5rem;
+
+          h4 {
+            font-size: 1.625rem;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    .nav {
+      bottom: 1.25rem;
+    }
+  }
+
+  @media (min-width: $laptop) {
+    height: 31.25rem;
+
+    .slide {
+      .contents {
+        .caption {
+          padding: 0 2.5rem;
+
+          h4 {
+            font-size: 2.25rem;
+            line-height: 1.1;
+            max-width: 25rem;
+          }
+
+          p {
+            font-size: 1.125rem;
+            max-width: 20rem;
+          }
+
+          button {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .arrow {
+        opacity: 0.2;
+      }
+    }
+
+    .arrow {
+      display: block;
+
+      &:hover {
+        opacity: 0.4;
+      }
+
+      &:active {
+        opacity: 0.2;
+      }
+    }
+
+    .nav {
+      bottom: 1.5625rem;
+
+      .item {
+        height: 1.875rem;
+      }
+    }
+  }
+
+  @media (min-width: $desktop) {
+    .slide {
+      .contents {
+        .caption {
+          padding: 0 3.75rem;
+        }
+      }
+    }
+  }
+}

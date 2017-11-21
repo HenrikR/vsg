@@ -1,0 +1,18 @@
+/*
+==========================================================================
+Theme Styles
+==========================================================================
+*/
+
+/* Configuration */
+$theme: 'vnd-ui-lagoon';
+@import 'config';
+
+/* Overrides */
+@import 'colors';
+
+/* Components */
+@import 'spinner';
+@import 'banner';
+@import 'carousel';
+@import 'header';

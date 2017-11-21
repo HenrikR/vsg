@@ -1,0 +1,51 @@
+.#{$theme} {
+  // header: menu and nav
+  .#{$namespace}menu {
+    .#{$namespace}nav {
+      background: $sky;
+    }
+  }
+
+  // header: burger (in toggle)
+  .#{$namespace}burger {
+    background: $sky;
+
+    &::before,
+    &::after {
+      background: $sky;
+    }
+
+    &.#{$namespace}is-closed {
+      background: transparent;
+
+      &::before {
+        background: $snow;
+      }
+
+      &::after {
+        background: $snow;
+      }
+    }
+  }
+
+  // tablet and up
+  @media (min-width: $tablet + 4.5em) {
+    .#{$namespace}menu {
+      &.#{$namespace}is-open {
+        background: none;
+      }
+
+      .#{$namespace}nav {
+        background: none;
+
+        a {
+          color: $smoke;
+
+          &.#{$namespace}is-active {
+            border-top-color: $sky;
+          }
+        }
+      }
+    }
+  }
+}

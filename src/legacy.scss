@@ -1,0 +1,32 @@
+/*
+==========================================================================
+Application Styles to support outdated and/or legacy browsers that are not
+fully modernized and do not support key HTML5 / CSS3 features.
+==========================================================================
+*/
+
+$namespace: 'v-';
+
+// support for: css object-fit
+.objectfit {
+  .vnd-image {
+    background: none !important;
+  }
+}
+
+.no-objectfit {
+  .vnd-image > img {
+    display: none;
+  }
+}
+
+// support for: css filter
+.no-cssfilters {
+  .#{$namespace}supports-filters {
+    display: none !important;
+  }
+
+  .#{$namespace}fallback-filters {
+    display: block !important;
+  }
+}

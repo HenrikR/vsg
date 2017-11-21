@@ -1,0 +1,9 @@
+.#{$theme} {
+  .#{$namespace}banner {
+    background-color: $sky;
+
+    .contents {
+      background-color: rgba($sky, 0.85);
+    }
+  }
+}

@@ -1,0 +1,39 @@
+$namespace: 'v-';
+
+$mobile:  30em;
+$tablet:  35.5em;
+$laptop:  60em;
+$desktop: 79.875em;
+
+$space-1: 0.625rem;
+$space-2: 1.25rem;
+$space-3: 2.5rem;
+$space-4: 3.75rem;
+
+$h1: 2.25rem;
+$h2: 1.5rem;
+$h3: 1.25rem;
+$h4: 1rem;
+$h5: 0.875rem;
+$h6: 0.75rem;
+
+$line-height: 1.5;
+$line-height-1: 1;
+$line-height-2: 1.15;
+$line-height-3: 1.3;
+$line-height-4: 1.5;
+
+$border-radius: 0.25rem;
+
+$snow: #fff;        // white
+$haze: #ececec;     // light-gray
+$mist: #d2d2d2;     // silver
+$fog: #737373;      // gray
+$cloud: #4a4a4a;    // dark-gray
+$smoke: #333;       // black
+$sky: #23bacf;      // primary
+
+$darken-1: rgba(0, 0, 0, 0.075);
+$darken-2: rgba(0, 0, 0, 0.15);
+$darken-3: rgba(0, 0, 0, 0.3);
+$darken-4: rgba(0, 0, 0, 0.6);

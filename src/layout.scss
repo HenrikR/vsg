@@ -1,0 +1,71 @@
+.#{$namespace}inline { display: inline; }
+.#{$namespace}block { display: block; }
+.#{$namespace}inline-block { display: inline-block; }
+
+.#{$namespace}table { display: table; }
+.#{$namespace}table-cell { display: table-cell; }
+.#{$namespace}table-fixed { table-layout: fixed; }
+
+.#{$namespace}align-baseline { vertical-align: baseline; }
+.#{$namespace}align-top { vertical-align: top; }
+.#{$namespace}align-middle { vertical-align: middle; }
+.#{$namespace}align-bottom { vertical-align: bottom; }
+
+.#{$namespace}left { float: left; }
+.#{$namespace}right { float: right; }
+.#{$namespace}fit { max-width: 100%; }
+
+.#{$namespace}clearfix::before,
+.#{$namespace}clearfix::after {
+  content: ' ';
+  display: table;
+}
+
+.#{$namespace}clearfix::after { clear: both; }
+.#{$namespace}overflow-hidden { overflow: hidden; }
+
+.#{$namespace}flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.#{$namespace}flex-wrap {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.#{$namespace}flex-baseline {
+  align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  -ms-grid-row-align: baseline;
+}
+
+.#{$namespace}flex-start {
+  align-items: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -ms-grid-row-align: flex-start;
+}
+
+.#{$namespace}flex-center {
+  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+}
+
+.#{$namespace}flex-end {
+  align-items: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -ms-grid-row-align: flex-end;
+}
+
+.#{$namespace}flex-stretch {
+  align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  -ms-grid-row-align: stretch;
+}

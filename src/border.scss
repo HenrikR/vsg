@@ -1,0 +1,42 @@
+.#{$namespace}b1 { border-style: solid; border-width: 1px; }
+.#{$namespace}bt1 { border-top-style: solid; border-top-width: 1px; }
+.#{$namespace}br1 { border-right-style: solid; border-right-width: 1px; }
+.#{$namespace}bb1 { border-bottom-style: solid; border-bottom-width: 1px; }
+.#{$namespace}bl1 { border-left-style: solid; border-left-width: 1px; }
+.#{$namespace}bx1 { border-style: none solid; border-width: 0 1px; }
+.#{$namespace}by1 { border-style: solid none; border-width: 1px 0; }
+
+.#{$namespace}b2 { border-style: solid; border-width: 2px; }
+.#{$namespace}bt2 { border-top-style: solid; border-top-width: 2px; }
+.#{$namespace}br2 { border-right-style: solid; border-right-width: 2px; }
+.#{$namespace}bb2 { border-bottom-style: solid; border-bottom-width: 2px; }
+.#{$namespace}bl2 { border-left-style: solid; border-left-width: 2px; }
+.#{$namespace}bx2 { border-style: none solid; border-width: 0 2px; }
+.#{$namespace}by2 { border-style: solid none; border-width: 2px 0; }
+
+.#{$namespace}b3 { border-style: solid; border-width: 3px; }
+.#{$namespace}bt3 { border-top-style: solid; border-top-width: 3px; }
+.#{$namespace}br3 { border-right-style: solid; border-right-width: 3px; }
+.#{$namespace}bb3 { border-bottom-style: solid; border-bottom-width: 3px; }
+.#{$namespace}bl3 { border-left-style: solid; border-left-width: 3px; }
+.#{$namespace}bx3 { border-style: none solid; border-width: 0 3px; }
+.#{$namespace}by3 { border-style: solid none; border-width: 3px 0; }
+
+.#{$namespace}b4 { border-style: solid; border-width: 4px; }
+.#{$namespace}bt4 { border-top-style: solid; border-top-width: 4px; }
+.#{$namespace}br4 { border-right-style: solid; border-right-width: 4px; }
+.#{$namespace}bb4 { border-bottom-style: solid; border-bottom-width: 4px; }
+.#{$namespace}bl4 { border-left-style: solid; border-left-width: 4px; }
+.#{$namespace}bx4 { border-style: none solid; border-width: 0 4px; }
+.#{$namespace}by4 { border-style: solid none; border-width: 4px 0; }
+
+.#{$namespace}b0 { border: 0; }
+
+.#{$namespace}rounded { border-radius: $border-radius; }
+.#{$namespace}rounded-t { border-radius: $border-radius $border-radius 0 0; }
+.#{$namespace}rounded-r { border-radius: 0 $border-radius $border-radius 0; }
+.#{$namespace}rounded-b { border-radius: 0 0 $border-radius $border-radius; }
+.#{$namespace}rounded-l { border-radius: $border-radius 0 0 $border-radius; }
+.#{$namespace}not-rounded { border-radius: 0; }
+.#{$namespace}circle { border-radius: 50%; }
+.#{$namespace}outline-none { outline: none; }

@@ -1,0 +1,71 @@
+.#{$theme} {
+  // header
+  .#{$namespace}header {
+    .vnd-icon-theme-sky {
+      color: $smoke;
+    }
+  }
+
+  .#{$namespace}header-bg {
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba($snow, 0.8);
+  }
+
+  // header: menu and nav
+  .#{$namespace}menu {
+    .#{$namespace}nav {
+      background: $sky;
+
+      a {
+        color: $smoke;
+
+        &.#{$namespace}is-active {
+          border-color: $smoke;
+        }
+      }
+    }
+  }
+
+  // header: burger (in toggle)
+  .#{$namespace}burger {
+    background: $smoke;
+
+    &::before,
+    &::after {
+      background: $smoke;
+    }
+
+    &.#{$namespace}is-closed {
+      background: transparent;
+
+      &::before {
+        background: $smoke;
+      }
+
+      &::after {
+        background: $smoke;
+      }
+    }
+  }
+
+  // tablet and up
+  @media (min-width: $tablet + 4.5em) {
+    .#{$namespace}menu {
+      &.#{$namespace}is-open {
+        background: none;
+      }
+
+      .#{$namespace}nav {
+        background: none;
+
+        a {
+          color: $smoke;
+
+          &.#{$namespace}is-active {
+            border-top-color: $sky;
+          }
+        }
+      }
+    }
+  }
+}

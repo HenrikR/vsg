@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage" prefix="og: http://ogp.me/ns#" data-ng-app="stub">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+
+  <!-- meta -->
+  <title>App Styleguide</title>
+  <meta name="title" content="App Styleguide"/>
+  
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" href="https://styleguide.cdnini.com/moon/style.min.css" id="styleguide-theme-style"/>
+  <link rel="stylesheet" type="text/css" href="/css/app.min.css"/>
+  <style>
+    body, html {
+      -webkit-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+    }
+    ::-moz-selection { background: #000; color:#8FD400; }
+    ::selection { background: #000; color:#8FD400; }
+    a { color: #73a110; text-decoration: underline; }
+    .v-code { font-family: Monaco, Menlo, Consolas, "Courier New", monospace; font-size: .875rem; font-weight:bold; }
+    hr { display:block; border-width: 0 0 0.5rem 0; border-color: #ddd; margin:7rem 0; }
+    section { min-height: 80vh; }
+    .label, ins { text-transform: uppercase; background:#ccc; font-size: 0.6875rem; color: #fff; padding: 0.25rem 0.5rem; border-radius:0.1rem; -webkit-user-select:none; font-family: sans-serif; }
+    ins { text-decoration:none; font-weight:bold; background:#8FD400; }
+  </style>
+</head>
+<body>
+
+
+
+
+
+<!-- docs -->
+<div class="app v-max-l v-mx-auto v-px1 v-m-px3">
+
+  <!-- docs:intro -->
+  <div class="v-center v-my4">
+    <h1>A Guide To The Styles</h1>
+    <p class="clearfix">
+      <a href="#intro" class="v-btn">Intro</a>
+      <a href="#paddings" class="v-btn">Paddings</a>
+      <a href="#margins" class="v-btn">Margins</a>
+      <a href="#borders" class="v-btn">Borders</a>
+      <a href="#sizes" class="v-btn">Sizes</a>
+      <a href="#colors" class="v-btn">Colors</a>
+      <a href="#headings" class="v-btn">Headings</a>
+      <a href="#truncate" class="v-btn">Truncate</a>
+      <a href="#flex" class="v-btn">Flex</a>
+      <a href="#hide" class="v-btn">Hide</a>
+      <a href="#the-grid" class="v-btn">The Grid</a>
+      <a href="#gutters" class="v-btn">Gutters</a>
+      <a href="#responsive-grid" class="v-btn">Responsive Grid</a>
+      <a href="#steal-this-grid" class="v-btn">Steal This Grid</a>
+      <a href="#modals" class="v-btn">Modals</a>
+    </p>
+  </div>
+
+  <hr/>
+
+  <!-- docs:intro -->
+  <section>
+    <h2 id="intro">Intro</h2>
+    <h3>Manifesto</h3>
+    <p>
+      This is a guide to the available styles in the application.
+      Here is a general outline and key of good things to know:
+    </p>
+    <ol>
+      <li>Styles are <strong>mobile first</strong> &mdash; so consider making them lightweight and perform well</li>
+      <li>Styles use <strong>a namespace</strong> &mdash; prefix them with: <strong class="v-code">v-</strong></li>
+      <li>Styles are <strong>atomic</strong> &mdash; designed to handle a specific thing: <strong class="v-code">-p for padding, -m for margin, -b for border, ...</strong></li>
+      <li>Styles are <strong>responsive</strong> &mdash; each style can be extended to target devices using a prefix of: <strong class="v-code">-s- -m- -l-</strong></li>
+      <li>Styles are <strong>concise</strong> &mdash; by limiting variations using a common scale: <strong class="v-code">-1 -2 -3 -4</strong></li>
+    </ol>
+    <h3>Settings</h3>
+    <p>
+      The current settings used are:
+    </p>
+    <ul class="v-list-reset">
+      <li><strong class="v-code v-mr2">v-&lt;style&gt;1</strong> 0.625rem or 10px</li>
+      <li><strong class="v-code v-mr2">v-&lt;style&gt;2</strong> 1.25rem or 20px</li>
+      <li><strong class="v-code v-mr2">v-&lt;style&gt;3</strong> 2.5rem or 40px</li>
+      <li><strong class="v-code v-mr2">v-&lt;style&gt;4</strong> 3.75rem or 60px</li>
+      <li><strong class="v-code v-mr2">v-s-&lt;style&gt;</strong> 35.5em and above or >= 568px</li>
+      <li><strong class="v-code v-mr2">v-m-&lt;style&gt;</strong> 64em and above or >= 1024px</li>
+      <li><strong class="v-code v-mr2">v-l-&lt;style&gt;</strong> 79.875em and above or >= 1278px</li>
+    </ul>
+  </section>
+
+  <hr/>
+
+
+  <!-- docs:paddings -->
+  <section>
+    <h2 id="paddings">Paddings</h2>
+    <p>
+      There are four levels of paddings available: v-p1, v-p2, v-p3, v-p4
+    </p>
+    <div class="v-code v-center v-clearfix v-mb2">
+      <div class="v-col v-p1 v-b1 v-b-mist">v-p1</div>
+      <div class="v-col v-p2 v-b1 v-b-mist">v-p2</div>
+      <div class="v-col v-p3 v-b1 v-b-mist">v-p3</div>
+      <div class="v-col v-p4 v-b1 v-b-mist">v-p4</div>
+    </div>
+
+    <p class="v-s-col-6">
+      You can also specify these only at on the x-axis (left/right) or the y-axis (top/bottom):
+      v-px1, v-px2, v-px3, v-px4
+      v-py1, v-py2, v-py3, v-py4
+    </p>
+    <div class="v-code v-center v-clearfix v-mb2">
+      <div class="v-col v-px1 v-b1 v-b-mist">v-px1</div>
+      <div class="v-col v-px2 v-b1 v-b-mist">v-px2</div>
+      <div class="v-col v-px3 v-b1 v-b-mist">v-px3</div>
+      <div class="v-col v-px4 v-b1 v-b-mist">v-px4</div>
+    </div>
+    <div class="v-code v-center v-clearfix v-mb2">
+      <div class="v-col v-py1 v-b1 v-b-mist">v-py1</div>
+      <div class="v-col v-py2 v-b1 v-b-mist">v-py2</div>
+      <div class="v-col v-py3 v-b1 v-b-mist">v-py3</div>
+      <div class="v-col v-py4 v-b1 v-b-mist">v-py4</div>
+    </div>
+
+    <p>Or use a combination</p>
+    <div class="v-code v-center v-clearfix v-mb2">
+      <div class="v-col v-px2 v-py1 v-b1 v-b-mist">v-px2 v-py1</div>
+      <div class="v-col v-px3 v-py2 v-b1 v-b-mist">v-px3 v-py2</div>
+      <div class="v-col v-px4 v-py3 v-b1 v-b-mist">v-px4 v-py3</div>
+    </div>
+
+    <p>And even responsively</p>
+    <div class="v-code v-center v-clearfix v-mb2">
+      <div class="v-col v-p1 v-s-p2 v-m-p3 v-l-p4 v-b1 v-b-mist">v-p1 v-s-p2 v-m-p3 v-l-p4</div>
+    </div>
+
+  </section>
+
+  <hr/>
+
+  <!-- docs:margins -->
+  <section>
+    <h2 id="margins">Margins</h2>
+    <p>
+      There are four levels of margins available: v-m1, v-m2, v-m3, v-m4
+    </p>
+    <div class="v-code v-center v-clearfix v-mb2">
+      <div class="v-col v-m1 v-b1 v-b-mist">v-m1</div>
+      <div class="v-col v-m2 v-b1 v-b-mist">v-m2</div>
+      <div class="v-col v-m3 v-b1 v-b-mist">v-m3</div>
+      <div class="v-col v-m4 v-b1 v-b-mist">v-m4</div>
+    </div>
+
+    <p class="v-s-col-6">
+      You can also specify these only at on the x-axis (left/right) or the y-axis (top/bottom):
+      v-mx1, v-mx2, v-mx3, v-mx4
+      v-my1, v-my2, v-my3, v-my4
+    </p>
+    <div class="v-code v-center v-clearfix v-mb2 v-b1 v-b-mist">
+      <div class="v-col v-mx1 v-b1 v-b-mist">v-mx1</div>
+      <div class="v-col v-mx2 v-b1 v-b-mist">v-mx2</div>
+      <div class="v-col v-mx3 v-b1 v-b-mist">v-mx3</div>
+      <div class="v-col v-mx4 v-b1 v-b-mist">v-mx4</div>
+    </div>
+    <div class="v-code v-center v-clearfix v-mb2 v-b1 v-b-mist">
+      <div class="v-col v-my1 v-b1 v-b-mist">v-my1</div>
+      <div class="v-col v-my2 v-b1 v-b-mist">v-my2</div>
+      <div class="v-col v-my3 v-b1 v-b-mist">v-my3</div>
+      <div class="v-col v-my4 v-b1 v-b-mist">v-my4</div>
+    </div>
+
+    <p>Or use a combination</p>
+    <div class="v-code v-center v-clearfix v-mb2 v-b1 v-b-mist">
+      <div class="v-col v-mx2 v-my1 v-b1 v-b-mist">v-mx2 v-my1</div>
+      <div class="v-col v-mx3 v-my2 v-b1 v-b-mist">v-mx3 v-my2</div>
+      <div class="v-col v-mx4 v-my3 v-b1 v-b-mist">v-mx4 v-my3</div>
+    </div>
+
+    <p>And even responsively</p>
+    <div class="v-code v-center v-clearfix v-mb2 v-b1 v-b-mist">
+      <div class="v-col v-m1 v-s-m2 v-m-m3 v-l-m4 v-b1 v-b-mist">v-m1 v-s-m2 v-m-m3 v-l-m4</div>
+    </div>
+
+  </section>
+
+  <hr/>
+
+  <!-- docs:borders -->
+  <section>
+    <h2 id="borders">Borders</h2>
+    <p>
+      There are four widths of borders available: v-b1 v-b-mist, v-b2, v-b3, v-b4
+    </p>
+    <div class="v-code v-center v-clearfix v-mb2">
+      <div class="v-col v-b1 v-mr2 v-p2">v-b1</div>
+      <div class="v-col v-b2 v-mr2 v-p2">v-b2</div>
+      <div class="v-col v-b3 v-mr2 v-p2">v-b3</div>
+      <div class="v-col v-b4 v-mr2 v-p2">v-b4</div>
+    </div>
+
+    <p class="v-s-col-6">
+      You can also specify these only at on the x-axis (left/right) or the y-axis (top/bottom):
+      v-bx1, v-bx2, v-bx3, v-bx4
+      v-by1, v-by2, v-by3, v-by4
+    </p>
+    <div class="v-code v-center v-clearfix v-mb2">
+      <div class="v-col v-bx1 v-mr2 v-p2">v-bx1</div>
+      <div class="v-col v-bx2 v-mr2 v-p2">v-bx2</div>
+      <div class="v-col v-bx3 v-mr2 v-p2">v-bx3</div>
+      <div class="v-col v-bx4 v-mr2 v-p2">v-bx4</div>
+    </div>
+    <div class="v-code v-center v-clearfix v-mb2">
+      <div class="v-col v-by1 v-mr2 v-p2">v-by1</div>
+      <div class="v-col v-by2 v-mr2 v-p2">v-by2</div>
+      <div class="v-col v-by3 v-mr2 v-p2">v-by3</div>
+      <div class="v-col v-by4 v-mr2 v-p2">v-by4</div>
+    </div>
+
+    <p>
+      To specify border colors, simply prefix the color with: v-b-&lt;color name&gt;
+    </p>
+    <div class="v-code v-center v-clearfix v-mb2">
+      <div class="v-col v-b2 v-b-mist v-mr2 v-p2">v-b2 v-b-mist</div>
+      <div class="v-col v-bt4 v-b-sky v-mr2 v-p2">v-bt4 v-b-sky</div>
+    </div>
+    <p>
+      <ins>Note:</ins>
+      See the <a href="#colors">colors</a> section for a full list of available colors.
+    </p>
+
+  </section>
+
+  <hr/>
+
+  <!-- docs:sizes -->
+  <section>
+    <h2 id="sizes">Sizes</h2>
+    <p>
+      These styles can be used to help define elements that require a fixed size, matching the scale of the styles ecosystem.
+    </p>
+    <p>
+      There are ten levels of sizes available, for both
+      widths (v-w1&mdash;10) and
+      heights (v-h1&mdash;10)
+    </p>
+    <p>
+      They increment at the value of 1.25rem (20px).
+    </p>
+    <p>Widths:</p>
+    <div class="v-code v-clearfix v-mb2">
+      v-w1 <div class="v-w1 v-b1 v-b-mist">&nbsp;</div>
+      v-w2 <div class="v-w2 v-b1 v-b-mist">&nbsp;</div>
+      v-w3 <div class="v-w3 v-b1 v-b-mist">&nbsp;</div>
+      v-w4 <div class="v-w4 v-b1 v-b-mist">&nbsp;</div>
+      v-w5 <div class="v-w5 v-b1 v-b-mist">&nbsp;</div>
+      v-w6 <div class="v-w6 v-b1 v-b-mist">&nbsp;</div>
+      v-w7 <div class="v-w7 v-b1 v-b-mist">&nbsp;</div>
+      v-w8 <div class="v-w8 v-b1 v-b-mist">&nbsp;</div>
+      v-w9 <div class="v-w9 v-b1 v-b-mist">&nbsp;</div>
+      v-w10 <div class="v-w10 v-b1 v-b-mist">&nbsp;</div>
+    </div>
+    <p>Heights:</p>
+    <div class="v-code v-clearfix v-mb2">
+      <div class="v-col v-mr1">v-h1<div class="v-h1 v-b1 v-b-mist">&nbsp;</div></div>
+      <div class="v-col v-mr1">v-h2<div class="v-h2 v-b1 v-b-mist">&nbsp;</div></div>
+      <div class="v-col v-mr1">v-h3<div class="v-h3 v-b1 v-b-mist">&nbsp;</div></div>
+      <div class="v-col v-mr1">v-h4<div class="v-h4 v-b1 v-b-mist">&nbsp;</div></div>
+      <div class="v-col v-mr1">v-h5<div class="v-h5 v-b1 v-b-mist">&nbsp;</div></div>
+      <div class="v-col v-mr1">v-h6<div class="v-h6 v-b1 v-b-mist">&nbsp;</div></div>
+      <div class="v-col v-mr1">v-h7<div class="v-h7 v-b1 v-b-mist">&nbsp;</div></div>
+      <div class="v-col v-mr1">v-h8<div class="v-h8 v-b1 v-b-mist">&nbsp;</div></div>
+      <div class="v-col v-mr1">v-h9<div class="v-h9 v-b1 v-b-mist">&nbsp;</div></div>
+      <div class="v-col v-mr1">v-h10<div class="v-h10 v-b1 v-b-mist">&nbsp;</div></div>
+    </div>
+    <p>&hellip; Or a combination of both:</p>
+    <div class="v-code v-clearfix v-mb2">
+      <div class="v-col v-mr1">v-w1 v-h1 <div class="v-w1 v-h1 v-b1 v-b-mist"></div></div>
+      <div class="v-col v-mr1">v-w2 v-h2 <div class="v-w2 v-h2 v-b1 v-b-mist"></div></div>
+      <div class="v-col v-mr1">v-w3 v-h3 <div class="v-w3 v-h3 v-b1 v-b-mist"></div></div>
+      <div class="v-col v-mr1">v-w4 v-h4 <div class="v-w4 v-h4 v-b1 v-b-mist"></div></div>
+      <div class="v-col v-mr1">v-w5 v-h5 <div class="v-w5 v-h5 v-b1 v-b-mist"></div></div>
+      <div class="v-col v-mr1">v-w6 v-h6 <div class="v-w6 v-h6 v-b1 v-b-mist"></div></div>
+      <div class="v-col v-mr1">v-w7 v-h7 <div class="v-w7 v-h7 v-b1 v-b-mist"></div></div>
+      <div class="v-col v-mr1">v-w8 v-h8 <div class="v-w8 v-h8 v-b1 v-b-mist"></div></div>
+      <div class="v-col v-mr1">v-w9 v-h9 <div class="v-w9 v-h9 v-b1 v-b-mist"></div></div>
+      <div class="v-col v-mr1">v-w10 v-h10 <div class="v-w10 v-h10 v-b1 v-b-mist"></div></div>
+    </div>
+
+  </section>
+
+  <hr/>
+
+  <!-- docs:colors -->
+  <section>
+    <h2 id="colors">Colors</h2>
+    <p>
+      There are four types of colors available: text color, background color, border color and fill color.
+    </p>
+    <div class="v-code v-center v-clearfix v-mb2">
+      <div class="v-col vnd-font-theme-sky v-mr2 v-p2">v-sky</div>
+      <div class="v-col v-bg-sky v-mr2 v-p2">v-bg-sky</div>
+      <div class="v-col v-b2 v-b-sky v-mr2 v-p2">v-b-sky</div>
+    </div>
+
+    <p class="v-s-col-6">
+      The following colors are currently available for all four types
+    </p>
+    <div class="v-code v-center v-clearfix v-mb2">
+      <div class="v-col v-col-6 v-s-col-2 v-bg-sky v-py4">v-bg-sky</div>
+      <div class="v-col v-col-6 v-s-col-2 v-bg-snow v-py4">v-bg-snow</div>
+      <div class="v-col v-col-6 v-s-col-2 v-bg-mist v-py4">v-bg-mist</div>
+      <div class="v-col v-col-6 v-s-col-2 v-bg-fog v-snow v-py4">v-bg-fog</div>
+      <div class="v-col v-col-6 v-s-col-2 v-bg-cloud v-snow v-py4">v-bg-cloud</div>
+      <div class="v-col v-col-6 v-s-col-2 v-bg-smoke v-snow v-py4">v-bg-smoke</div>
+    </div>
+    <p>
+      <ins>Note:</ins>
+      Please
+      <a href="http://styleguide.devel.vendini.com/moon/docs/styleguide/section-1.html#Colors">visit the LSG</a>
+      to view the color styles already available and which have been deprecated in the app.
+    </p>
+
+  </section>
+
+  <hr/>
+
+  <!-- docs:headings -->
+  <section>
+    <h2 id="headings">Headings</h2>
+    <p>
+      There are six levels of headings and responsive headings.
+    </p>
+    <div class="v-clearfix v-mb2">
+      <div class="v-col v-col-12">
+        <div class="v-py2">
+          <p class="v-code">v-fs-h1 to v-fs-h6</p>
+
+          <p class="v-fs-h1">Gold seven seas legs loot</p>
+          <p class="v-fs-h2">Gold seven seas legs loot</p>
+          <p class="v-fs-h3">Gold seven seas legs loot</p>
+          <p class="v-fs-h4">Gold seven seas legs loot</p>
+          <p class="v-fs-h5">Gold seven seas legs loot</p>
+          <p class="v-fs-h6">Gold seven seas legs loot</p>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Responsive headings retain their size and scale up from mobile.
+    </p>
+
+    <div class="v-clearfix v-mb2">
+      <div class="v-col v-col-12">
+        <div class="v-py2">
+          <p class="v-code">v-rfs-h1 to v-rfs-h6</p>
+
+          <p class="v-rfs-h1">Gold seven seas legs loot</p>
+          <p class="v-rfs-h2">Gold seven seas legs loot timber jack</p>
+          <p class="v-rfs-h3">Gold seven seas legs loot timber jack pirate</p>
+          <p class="v-rfs-h4">Gold seven seas legs loot timber jack pirate hogshead</p>
+          <p class="v-rfs-h5">Gold seven seas legs loot timber jack pirate hogshead careen</p>
+          <p class="v-rfs-h6">Gold seven seas legs loot timber jack pirate hogshead careen arr ye run</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr/>
+
+  <!-- docs:truncate -->
+  <section>
+    <h2 id="truncate">Truncate</h2>
+    <p>
+      There are three levels of truncating text to 1, 2 or 3 lines.
+    </p>
+    <div class="v-clearfix v-mb2">
+      <div class="v-col v-col-12 v-m-col-4">
+        <div class="v-pr2 v-py2">
+          <p class="v-code">v-truncate</p>
+
+          <p class="v-truncate">
+            Capstan come about smartly bucko lugsail Pirate Round Pieces of Eight handsomely driver swing the lead. Aft six pounders Sea Legs gunwalls hornswaggle careen loot Jack Ketch prow case shot. Gally barque Chain Shot swab hogshead heave down draft crack Jennys tea cup Gold Road rigging.
+          </p>
+
+          <p class="v-truncate vnd-font-size-large">
+            Capstan come about smartly bucko lugsail Pirate Round Pieces of Eight handsomely driver swing the lead. Aft six pounders Sea Legs gunwalls hornswaggle careen loot Jack Ketch prow case shot. Gally barque Chain Shot swab hogshead heave down draft crack Jennys tea cup Gold Road rigging.
+          </p>
+
+          <h2 class="vnd-h2 v-truncate">
+            Capstan come about smartly bucko lugsail Pirate Round Pieces of Eight handsomely driver swing the lead. Aft six pounders Sea Legs gunwalls hornswaggle careen loot Jack Ketch prow case shot. Gally barque Chain Shot swab hogshead heave down draft crack Jennys tea cup Gold Road rigging.
+          </h2>
+        </div>
+      </div>
+      <div class="v-col v-col-12 v-m-col-4">
+        <div class="v-pr2 v-py2">
+          <p class="v-code">v-truncate-2</p>
+
+          <p class="v-truncate-2">
+            Six pounders chantey black spot salmagundi Nelsons folly chase Arr ye trysail scourge of the seven seas. Brigantine wench coxswain sheet cutlass galleon execution dock gabion bilge handsomely. Chandler Sea Legs strike colors belay boom starboard reef transom bowsprit flogging.
+          </p>
+
+          <p class="v-truncate-2 vnd-font-size-large">
+            Six pounders chantey black spot salmagundi Nelsons folly chase Arr ye trysail scourge of the seven seas. Brigantine wench coxswain sheet cutlass galleon execution dock gabion bilge handsomely. Chandler Sea Legs strike colors belay boom starboard reef transom bowsprit flogging.
+          </p>
+
+          <h2 class="vnd-h2 v-truncate-2">
+            Six pounders chantey black spot salmagundi Nelsons folly chase Arr ye trysail scourge of the seven seas. Brigantine wench coxswain sheet cutlass galleon execution dock gabion bilge handsomely. Chandler Sea Legs strike colors belay boom starboard reef transom bowsprit flogging.
+          </h2>
+        </div>
+      </div>
+      <div class="v-col v-col-12 v-m-col-4">
+        <div class="v-pr2 v-py2">
+          <p class="v-code">v-truncate-3</p>
+
+          <p class="v-truncate-3">
+            Square-rigged Pieces of Eight avast lee bucko port wench yardarm Shiver me timbers interloper. Run a shot across the bow gangway boom prow swing the lead handsomely poop deck Barbary Coast shrouds Pirate Round. Me cutlass hands spike tackle barkadeer snow hulk topsail Buccaneer.
+          </p>
+
+          <p class="v-truncate-3 vnd-font-size-large">
+            Square-rigged Pieces of Eight avast lee bucko port wench yardarm Shiver me timbers interloper. Run a shot across the bow gangway boom prow swing the lead handsomely poop deck Barbary Coast shrouds Pirate Round. Me cutlass hands spike tackle barkadeer snow hulk topsail Buccaneer.
+          </p>
+
+          <h2 class="vnd-h2 v-truncate-3">
+            Square-rigged Pieces of Eight avast lee bucko port wench yardarm Shiver me timbers interloper. Run a shot across the bow gangway boom prow swing the lead handsomely poop deck Barbary Coast shrouds Pirate Round. Me cutlass hands spike tackle barkadeer snow hulk topsail Buccaneer.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr/>
+
+  <!-- docs:flex -->
+  <section>
+    <div class="v-s-col-6">
+      <h2 id="flex">Flex</h2>
+      <p>!!!</p>
+    </div>
+    <div class="v-code v-center">
+      <div class="v-p2">v-flex v-flex-end</div>
+      <div class="v-flex v-flex-end v-b1 v-b-mist">
+        <div class="v-p3 v-bg-snow v-b1 v-b-mist"><h1>Avast</h1><p>Run a shot across the bow</p></div>
+        <div class="v-p3 v-bg-snow v-b1 v-b-mist">Seven Seas</div>
+      </div>
+    </div>
+  </section>
+
+  <hr/>
+
+  <!-- docs:hide -->
+  <section>
+    <div class="v-s-col-6">
+      <h2 id="hide">Hide</h2>
+      <p>Helpers to hide at different breakpoints: tiny, x-small, small, medium, large</p>
+    </div>
+    <div class="v-code v-center">
+      <div class="v-p4 v-bg-sky v-snow v-xs-hide v-s-hide v-m-hide v-l-hide">You're on a phone!</div>
+      <div class="v-p4 v-bg-sky v-snow v-t-hide v-s-hide v-m-hide v-l-hide">You're on a phone (landscape mode)</div>
+      <div class="v-p4 v-bg-sky v-snow v-t-hide v-xs-hide v-m-hide v-l-hide">You're on a tablet (portrait mode)</div>
+      <div class="v-p4 v-bg-sky v-snow v-t-hide v-xs-hide v-s-hide v-l-hide">You're on a tablet or laptop!</div>
+      <div class="v-p4 v-bg-sky v-snow v-t-hide v-xs-hide v-s-hide v-m-hide">You're on a desktop!</div>
+
+      <div class="v-clearfix">
+        <div class="v-col v-col-3 v-py4 v-b1 v-b-mist v-t-hide">v-t-hide</div>
+        <div class="v-col v-col-3 v-py4 v-b1 v-b-mist v-xs-hide">v-xs-hide</div>
+        <div class="v-col v-col-3 v-py4 v-b1 v-b-mist v-s-hide">v-s-hide</div>
+        <div class="v-col v-col-3 v-py4 v-b1 v-b-mist v-m-hide">v-m-hide</div>
+        <div class="v-col v-col-3 v-py4 v-b1 v-b-mist v-l-hide">v-l-hide</div>
+      </div>
+    </div>
+  </section>
+
+  <hr/>
+
+  <!-- docs:grid -->
+  <section>
+    <div class="v-s-col-6">
+      <h2 id="the-grid">The Grid</h2>
+      <p>
+        Using a combination of columns (widths) from v-col-1 to v-col-12 and floats (v-col for left and v-col-r for right),
+        you can build any type of grid you wish.
+      </p>
+    </div>
+    <div class="v-code v-center">
+      <div class="v-col v-col-12 v-py2 v-b1 v-b-mist">v-col-12</div>
+      <div class="v-clearfix">
+        <div class="v-col v-col-11 v-py2 v-b1 v-b-mist">v-col-11</div><div class="v-col v-col-1 v-py2 v-b1 v-b-mist">v-col-1</div>
+      </div>
+      <div class="v-clearfix">
+        <div class="v-col v-col-10 v-py2 v-b1 v-b-mist">v-col-10</div><div class="v-col v-col-2 v-py2 v-b1 v-b-mist">v-col-2</div>
+      </div>
+      <div class="v-clearfix">
+        <div class="v-col v-col-9 v-py2 v-b1 v-b-mist">v-col-9</div><div class="v-col v-col-3 v-py2 v-b1 v-b-mist">v-col-3</div>
+      </div>
+      <div class="v-clearfix">
+        <div class="v-col v-col-8 v-py2 v-b1 v-b-mist">v-col-8</div><div class="v-col v-col-4 v-py2 v-b1 v-b-mist">v-col-4</div>
+      </div>
+      <div class="v-clearfix">
+        <div class="v-col v-col-7 v-py2 v-b1 v-b-mist">v-col-7</div><div class="v-col v-col-5 v-py2 v-b1 v-b-mist">v-col-5</div>
+      </div>
+      <div class="v-clearfix">
+        <div class="v-col v-col-6 v-py2 v-b1 v-b-mist">v-col-6</div><div class="v-col v-col-6 v-py2 v-b1 v-b-mist">v-col-6</div>
+      </div>
+      <div class="v-clearfix">
+        <div class="v-col v-col-5 v-py2 v-b1 v-b-mist">v-col-5</div><div class="v-col v-col-7 v-py2 v-b1 v-b-mist">v-col-7</div>
+      </div>
+      <div class="v-clearfix">
+        <div class="v-col v-col-4 v-py2 v-b1 v-b-mist">v-col-4</div><div class="v-col v-col-8 v-py2 v-b1 v-b-mist">v-col-8</div>
+      </div>
+      <div class="v-clearfix">
+        <div class="v-col v-col-3 v-py2 v-b1 v-b-mist">v-col-3</div><div class="v-col v-col-9 v-py2 v-b1 v-b-mist">v-col-9</div>
+      </div>
+      <div class="v-clearfix">
+        <div class="v-col v-col-2 v-py2 v-b1 v-b-mist">v-col-2</div><div class="v-col v-col-10 v-py2 v-b1 v-b-mist">v-col-10</div>
+      </div>
+      <div class="v-clearfix">
+        <div class="v-col v-col-1 v-py2 v-b1 v-b-mist">v-col-1</div><div class="v-col v-col-11 v-py2 v-b1 v-b-mist">v-col-11</div>
+      </div>
+    </div>
+    <p class="v-mt2">
+      <ins>Note:</ins> Please use v-col or v-col-r in addition to the width to float the column left or right.
+    </p>
+  </section>
+
+  <hr/>
+
+  <!-- docs:gutters -->
+  <section>
+    <div class="v-s-col-6">
+      <h2 id="gutters">Gutters</h2>
+      <p>
+        The core of the grid is dependant on widths and floats, it is best to defer margins and paddings to the
+        contents of the grid column &mdash; and this includes gutters.
+      </p>
+    </div>
+    <div class="v-code v-center v-overflow-hidden">
+      <div class="v-clearfix v-mxn2 v-b1 v-b-mist v-pb2 v-mb2">
+        <div class="v-col-12">v-clearfix v-mxn2</div>
+        <div class="v-col v-col-4 v-pb2 v-b1 v-b-mist">
+          v-col-4
+          <div class="v-mx2 v-py4 v-bg-snow v-b1 v-b-mist">
+            v-mx2
+          </div>
+        </div>
+        <div class="v-col v-col-4 v-pb2 v-b1 v-b-mist">
+          v-col-4
+          <div class="v-mx2 v-py4 v-bg-snow v-b1 v-b-mist">
+            v-mx2
+          </div>
+        </div>
+        <div class="v-col v-col-4 v-pb2 v-b1 v-b-mist">
+          v-col-4
+          <div class="v-mx2 v-py4 v-bg-snow v-b1 v-b-mist">
+            v-mx2
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="v-mt2">
+      <span class="v-code">.v-mx2 </span> &mdash; Provides a gutter margin to the contents with 2 spaces on the x axis (left/right)<br/>
+      <span class="v-code">.v-mxn2 </span> &mdash; Provides a gutter margin to the grid container with negative 2 spaces on the x axis (left/right)<br/>
+    </p>
+  </section>
+
+  <hr/>
+
+  <!-- docs:responsive-grid -->
+  <section>
+    <div class="v-s-col-6">
+      <h2 id="responsive-grid">Responsive Grid</h2>
+      <p>
+        Responsive utility classes (v-s, v-m, v-l) are available as well to specify different column sizes at small (s),
+        medium (m) and large (l) breakpoints to create responsive grids! Let's take a look:
+      </p>
+    </div>
+    <div class="v-code v-center">
+      <div class="v-clearfix">
+        <div class="v-col v-col-12 v-s-col-6 v-m-col-4 v-py2 v-b1 v-b-mist">
+          v-col-12 <br/>
+          v-s-col-6 <br/>
+          v-m-col-4
+        </div>
+        <div class="v-col v-col-12 v-s-col-6 v-m-col-4 v-py2 v-b1 v-b-mist">
+          v-col-12 <br/>
+          v-s-col-6 <br/>
+          v-m-col-4
+        </div>
+        <div class="v-col v-col-12 v-s-col-6 v-m-col-4 v-py2 v-b1 v-b-mist">
+          v-col-12 <br/>
+          v-s-col-6 <br/>
+          v-m-col-4
+        </div>
+      </div>
+    </div>
+    <p class="v-mt2">
+      <span class="v-code">.v-col-12 </span> &mdash; Default breakpoint has 12 column width (full width)<br/>
+      <span class="v-code">.v-s-col-6</span> &mdash; Small breakpoint and above turns into 6 column width (half width)<br/>
+      <span class="v-code">.v-m-col-4</span> &mdash; Medium breakpoint and above turns into 4 column width (third width)<br/><br/>
+      <ins>Note:</ins> Since there is no large breakpoint specified, the 4 column width still applies to large screens.
+    </p>
+  </section>
+
+  <hr/>
+
+  <!-- docs:steal-this-grid -->
+  <section>
+    <div class="v-s-col-6 v-mb4">
+      <h2 id="steal-this-grid">Steal This Grid</h2>
+      <p>
+        To make it too easy we've decided to bake a few of your favourite grids for you to use in your app.
+        <strong>Please directly copy and paste (no need to even view source)</strong>.
+      </p>
+    </div>
+
+    <h3 id="1-2-3-up">One-Two-Three Up</h3>
+    <p>To be used on the Performers page</p>
+    <div class="v-code">
+      <div class="v-b1 v-b-mist">
+
+        <div class="v-clearfix v-mt1 v-s-mt2 v-s-mx1 v-l-mt3 v-l-mx2">
+          <div class="v-col v-col-12 v-m-col-6 v-l-col-4">
+            <div class="v-mx1 v-l-mx2 v-mb1 v-s-mb2 v-l-mb3">
+              <div class="vnd-component v-p4 v-center v-bg-snow">One</div>
+            </div>
+          </div>
+          <div class="v-col v-col-12 v-m-col-6 v-l-col-4">
+            <div class="v-mx1 v-l-mx2 v-mb1 v-s-mb2 v-l-mb3">
+              <div class="vnd-component v-p4 v-center v-bg-snow">Two</div>
+            </div>
+          </div>
+          <div class="v-col v-col-12 v-m-col-6 v-l-col-4">
+            <div class="v-mx1 v-l-mx2 v-mb1 v-s-mb2 v-l-mb3">
+              <div class="vnd-component v-p4 v-center v-bg-snow">Three</div>
+            </div>
+          </div>
+          <div class="v-col v-col-12 v-m-col-6 v-l-col-4">
+            <div class="v-mx1 v-l-mx2 v-mb1 v-s-mb2 v-l-mb3">
+              <div class="vnd-component v-p4 v-center v-bg-snow">Four</div>
+            </div>
+          </div>
+          <div class="v-col v-col-12 v-m-col-6 v-l-col-4">
+            <div class="v-mx1 v-l-mx2 v-mb1 v-s-mb2 v-l-mb3">
+              <div class="vnd-component v-p4 v-center v-bg-snow">Five</div>
+            </div>
+          </div>
+          <div class="v-col v-col-12 v-m-col-6 v-l-col-4">
+            <div class="v-mx1 v-l-mx2 v-mb1 v-s-mb2 v-l-mb3">
+              <div class="vnd-component v-p4 v-center v-bg-snow">Six</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="v-py2 v-pb4">
+        <p>
+          <span class="label">grid</span>
+          v-clearfix
+          v-mt1
+          v-s-mt2 v-s-mx1
+          v-l-mt3 v-l-mx2
+        </p>
+        <p>
+          <span class="label">column</span>
+          v-col
+          v-col-12
+          v-m-col-6
+          v-l-col-4
+        </p>
+        <p>
+          <span class="label">component</span>
+          v-mx1 v-mb1
+          v-s-mb2
+          v-l-mx2 v-l-mb3
+        </p>
+      </div>
+
+    </div>
+  </section>
+  <section>
+    <h3 id="1-2-up">One-Two Up</h3>
+    <p>To be used on the Venues page</p>
+    <div class="v-code">
+      <div class="v-b1 v-b-mist">
+
+        <div class="v-clearfix v-mt1 v-s-mt2 v-s-mx1 v-l-mt3 v-l-mx2">
+          <div class="v-col v-col-12 v-l-col-6">
+            <div class="v-mx1 v-l-mx2 v-mb1 v-s-mb2 v-l-mb3">
+              <div class="vnd-component v-p4 v-center v-bg-snow">One</div>
+            </div>
+          </div>
+          <div class="v-col v-col-12 v-l-col-6">
+            <div class="v-mx1 v-l-mx2 v-mb1 v-s-mb2 v-l-mb3">
+              <div class="vnd-component v-p4 v-center v-bg-snow">Two</div>
+            </div>
+          </div>
+          <div class="v-col v-col-12 v-l-col-6">
+            <div class="v-mx1 v-l-mx2 v-mb1 v-s-mb2 v-l-mb3">
+              <div class="vnd-component v-p4 v-center v-bg-snow">Three</div>
+            </div>
+          </div>
+          <div class="v-col v-col-12 v-l-col-6">
+            <div class="v-mx1 v-l-mx2 v-mb1 v-s-mb2 v-l-mb3">
+              <div class="vnd-component v-p4 v-center v-bg-snow">Four</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="v-py2 v-pb4">
+        <p>
+          <span class="label">grid</span>
+          v-clearfix
+          v-mt1
+          v-s-mt2 v-s-mx1
+          v-l-mt3 v-l-mx2
+        </p>
+        <p>
+          <span class="label">column</span>
+          v-col
+          v-col-12
+          v-l-col-6
+        </p>
+        <p>
+          <span class="label">component</span>
+          v-mx1 v-mb1
+          v-s-mb2
+          v-l-mx2 v-l-mb3
+        </p>
+      </div>
+
+    </div>
+  </section>
+  <section>
+    <h3 id="1-and-3-4-up">One-And-Three-Four Up</h3>
+    <p>To be used on the filters</p>
+    <div class="v-code">
+      <div class="v-b1 v-b-mist">
+
+        <div class="v-clearfix v-m1 v-s-m2 v-l-m3">
+          <div class="v-col v-col-12 v-s-col-3">
+            <div class="">
+              <div class="vnd-component v-p1 v-center v-b1 v-b-mist v-b-mist v-bg-snow">One</div>
+            </div>
+          </div>
+          <div class="v-col v-col-4 v-s-col-3">
+            <div class="">
+              <div class="vnd-component v-p1 v-center v-b1 v-b-mist v-b-mist v-bg-snow">Two</div>
+            </div>
+          </div>
+          <div class="v-col v-col-4 v-s-col-3">
+            <div class="">
+              <div class="vnd-component v-p1 v-center v-b1 v-b-mist v-b-mist v-bg-snow">Three</div>
+            </div>
+          </div>
+          <div class="v-col v-col-4 v-s-col-3">
+            <div class="">
+              <div class="vnd-component v-p1 v-center v-b1 v-b-mist v-b-mist v-bg-snow">Four</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="v-py2 v-pb4">
+        <p>
+          <span class="label">grid</span>
+          v-clearfix
+          v-m1
+          v-s-m2
+          v-l-m3
+        </p>
+        <p>
+          <span class="label">column 1</span>
+          v-col
+          v-col-12
+          v-s-col-3
+        </p>
+        <p>
+          <span class="label">columns 2, 3, 4</span>
+          v-col-4
+          v-s-col-3
+        </p>
+        <p>
+          <span class="label">component</span>
+          (none)
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <hr/>
+
+  <!-- docs:modals -->
+  <section>
+    <div class="v-s-col-6">
+      <h2 id="modals">Modals</h2>
+      <p></p>
+    </div>
+
+    <div class="v-b1 v-b-mist v-p2">
+      <button class="vnd-link"
+              data-stub-modal
+              data-config='{
+                "templateId": "modal-content"
+              }'
+              data-ng-click="vm.openModal()">
+        Open Modal
+      </button>
+      <script type="text/ng-template" id="modal-content">
+        <div class="v-max-l v-mx-auto v-clearfix v-m0 v-s-p3">
+          <div class="v-px1 v-py2 v-m0 v-s-p3 v-s-m3 v-l-p4 v-l-m4 v-bg-snow">
+            <div class="v-relative">
+              <h5 class="vnd-h2 v-mb2 v-m-mb3">Modal Title</h5>
+              <ul class="vnd-list v-list-reset">
+                <li class="vnd-list-section"
+                    data-ng-repeat="key in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
+                  <a class="v-block v-overflow-hidden vnd-font-theme-fog vnd-font-weight-semibold"
+                     data-ng-href="#/modal-row-{{key}}">
+                    <div class="v-col v-col-5 v-s-col-4 v-m-col-3">
+                      <span class="v-block v-py1">Modal Content</span>
+                    </div>
+                    <div class="v-col v-col-4 v-m-col-2">
+                      <strong class="v-block v-py1 v-pl1 v-ml1 v-s-ml0 v-s-pl2 vnd-font-weight-bold v-bl1 v-b-mist"
+                              data-ng-bind="'Row ' + key">
+                      </strong>
+                    </div>
+                    <div class="v-col-r v-col-3 v-s-col-auto">
+                    <span class="vnd-button vnd-button-theme-sky">
+                      Select
+                    </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <button class="ngdialog-close"></button>
+            </div>
+          </div>
+        </div>
+      </script>
+    </div>
+
+<pre class="v-code v-p2 v-b1 v-b-mist">
+&lt;button class="vnd-link"
+        data-stub-modal
+        data-config='{
+          "templateId": "modal-content"
+        }'
+        data-ng-click="vm.openModal()"&gt;
+  Open Modal
+&lt;/button&gt;
+&lt;script type="text/ng-template" id="modal-content"&gt;
+      Modal Content
+&lt;/script&gt;
+</pre>
+  </section>
+
+  <hr/>
+
+  <p class="v-fixed v-pos-b0 v-pos-l0 v-pos-r0 v-center">
+    <a href="#top" class="v-btn v-p3 vnd-font-style-uppercase vnd-font-size-medium">Back to top</a>
+  </p>
+
+</div>
+
+
+
+
+<script src="https://www.laughstub.com/app/js/stub-sites.vendor.js" type="text/javascript"></script>
+<script src="https://www.laughstub.com/app/js/stub-sites.config.js" type="text/javascript"></script>
+<script src="https://www.laughstub.com/app/js/stub-sites-v0.3.3.min.js" type="text/javascript"></script>
+
+</body>
+</html>

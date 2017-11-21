@@ -1,0 +1,106 @@
+.#{$namespace}max-t { max-width: $mobile; }
+.#{$namespace}max-s { max-width: $tablet; }
+.#{$namespace}max-m { max-width: $laptop; }
+.#{$namespace}max-l { max-width: $desktop; }
+
+.#{$namespace}col {
+  box-sizing: border-box;
+  float: left;
+}
+
+.#{$namespace}col-r {
+  box-sizing: border-box;
+  float: right;
+}
+
+.#{$namespace}col-1 { width: 8.33333%; }
+.#{$namespace}col-2 { width: 16.66667%; }
+.#{$namespace}col-3 { width: 25%; }
+.#{$namespace}col-4 { width: 33.33333%; }
+.#{$namespace}col-5 { width: 41.66667%; }
+.#{$namespace}col-6 { width: 50%; }
+.#{$namespace}col-7 { width: 58.33333%; }
+.#{$namespace}col-8 { width: 66.66667%; }
+.#{$namespace}col-9 { width: 75%; }
+.#{$namespace}col-10 { width: 83.33333%; }
+.#{$namespace}col-11 { width: 91.66667%; }
+.#{$namespace}col-12 { width: 100%; }
+.#{$namespace}col-auto { width: auto; }
+
+@media (min-width: $tablet){
+  .#{$namespace}s-col {
+    box-sizing: border-box;
+    float: left;
+  }
+
+  .#{$namespace}s-col-r {
+    box-sizing: border-box;
+    float: right;
+  }
+
+  .#{$namespace}s-col-1 { width: 8.33333%; }
+  .#{$namespace}s-col-2 { width: 16.66667%; }
+  .#{$namespace}s-col-3 { width: 25%; }
+  .#{$namespace}s-col-4 { width: 33.33333%; }
+  .#{$namespace}s-col-5 { width: 41.66667%; }
+  .#{$namespace}s-col-6 { width: 50%; }
+  .#{$namespace}s-col-7 { width: 58.33333%; }
+  .#{$namespace}s-col-8 { width: 66.66667%; }
+  .#{$namespace}s-col-9 { width: 75%; }
+  .#{$namespace}s-col-10 { width: 83.33333%; }
+  .#{$namespace}s-col-11 { width: 91.66667%; }
+  .#{$namespace}s-col-12 { width: 100%; }
+  .#{$namespace}s-col-auto { width: auto; }
+}
+
+@media (min-width: $laptop){
+  .#{$namespace}m-col {
+    box-sizing: border-box;
+    float: left;
+  }
+
+  .#{$namespace}m-col-r {
+    box-sizing: border-box;
+    float: right;
+  }
+
+  .#{$namespace}m-col-1 { width: 8.33333%; }
+  .#{$namespace}m-col-2 { width: 16.66667%; }
+  .#{$namespace}m-col-3 { width: 25%; }
+  .#{$namespace}m-col-4 { width: 33.33333%; }
+  .#{$namespace}m-col-5 { width: 41.66667%; }
+  .#{$namespace}m-col-6 { width: 50%; }
+  .#{$namespace}m-col-7 { width: 58.33333%; }
+  .#{$namespace}m-col-8 { width: 66.66667%; }
+  .#{$namespace}m-col-9 { width: 75%; }
+  .#{$namespace}m-col-10 { width: 83.33333%; }
+  .#{$namespace}m-col-11 { width: 91.66667%; }
+  .#{$namespace}m-col-12 { width: 100%; }
+  .#{$namespace}m-col-auto { width: auto; }
+}
+
+@media (min-width: $desktop){
+  .#{$namespace}l-col {
+    box-sizing: border-box;
+    float: left;
+  }
+
+  .#{$namespace}l-col-r {
+    box-sizing: border-box;
+    float: right;
+  }
+
+  .#{$namespace}l-col-1 { width: 8.33333%; }
+  .#{$namespace}l-col-2 { width: 16.66667%; }
+  .#{$namespace}l-col-3 { width: 25%; }
+  .#{$namespace}l-col-4 { width: 33.33333%; }
+  .#{$namespace}l-col-5 { width: 41.66667%; }
+  .#{$namespace}l-col-6 { width: 50%; }
+  .#{$namespace}l-col-7 { width: 58.33333%; }
+  .#{$namespace}l-col-8 { width: 66.66667%; }
+  .#{$namespace}l-col-9 { width: 75%; }
+  .#{$namespace}l-col-10 { width: 83.33333%; }
+  .#{$namespace}l-col-11 { width: 91.66667%; }
+  .#{$namespace}l-col-12 { width: 100%; }
+  .#{$namespace}l-col-auto { width: auto; }
+}

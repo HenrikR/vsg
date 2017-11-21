@@ -1,0 +1,29 @@
+.#{$namespace}relative { position: relative; }
+.#{$namespace}absolute { position: absolute; }
+.#{$namespace}fixed { position: fixed; }
+.#{$namespace}pos-t0 { top: 0; }
+.#{$namespace}pos-r0 { right: 0; }
+.#{$namespace}pos-b0 { bottom: 0; }
+.#{$namespace}pos-l0 { left: 0; }
+.#{$namespace}z1 { z-index: 1; }
+.#{$namespace}z2 { z-index: 2; }
+.#{$namespace}z3 { z-index: 3; }
+.#{$namespace}z4 { z-index: 4; }
+
+@media (min-width: $mobile){
+  .#{$namespace}s-relative { position: relative; }
+  .#{$namespace}s-absolute { position: absolute; }
+  .#{$namespace}s-fixed { position: fixed; }
+}
+
+@media (min-width: $tablet){
+  .#{$namespace}m-relative { position: relative; }
+  .#{$namespace}m-absolute { position: absolute; }
+  .#{$namespace}m-fixed { position: fixed; }
+}
+
+@media (min-width: $desktop){
+  .#{$namespace}l-relative { position: relative; }
+  .#{$namespace}l-absolute { position: absolute; }
+  .#{$namespace}l-fixed { position: fixed; }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "vsg",
+  "version": "0.3.3",
+  "description": "A lightweight, atomic and reusable CSS framework and style guide.",
+  "repository": "https://github.com/HenrikR/vsg",
+  "private": true,
+  "author": "Henrik Rypkema",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  },
+  "scripts": {
+    "build:docs": "node-sass --output-style compressed ./src/app.scss ./docs/css/app.min.css",    
+    "build": "node-sass --output-style compressed ./src/app.scss ./dist/css/app.min.css",
+    "clean": "rm -rf .dist/ ./node_modules ./docs/css",
+    "docs": "http-server ./docs -o",
+    "predocs": "npm run build:docs",
+    "sass": "node-sass --output-style compressed --watch ./src -o ./dist/css",
+    "start": "npm run sass"
+  }
+}

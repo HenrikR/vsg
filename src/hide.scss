@@ -1,0 +1,29 @@
+.#{$namespace}hide {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+}
+
+.#{$namespace}display-none { display: none !important; }
+
+@media (max-width: $mobile) {
+  .#{$namespace}t-hide { display: none !important; }
+}
+
+@media (min-width: $mobile + 0.0625em) and (max-width: $tablet - 0.0625em) {
+  .#{$namespace}xs-hide { display: none !important; }
+}
+
+@media (min-width: $tablet) and (max-width: $laptop - 0.0625em) {
+  .#{$namespace}s-hide { display: none !important; }
+}
+
+@media (min-width: $laptop) and (max-width: $desktop - 0.0625em) {
+  .#{$namespace}m-hide { display: none !important; }
+}
+
+@media (min-width: $desktop) {
+  .#{$namespace}l-hide { display: none !important; }
+}

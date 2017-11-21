@@ -1,0 +1,43 @@
+.#{$namespace}banner {
+  background: 0 0 no-repeat;
+  background-color: $sky;
+  background-size: cover;
+  height: 6.25rem;
+  margin-bottom: -2rem;
+  position: relative;
+  z-index: 0;
+
+  .contents {
+    background-color: rgba($sky, 0.85);
+    height: 100%;
+    width: 100%;
+
+    > div {
+      height: 100%;
+      padding-bottom: 2rem;
+      width: 100%;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: $snow;
+    line-height: 1;
+  }
+
+  @media (min-width: $tablet) {
+    height: 8.125rem;
+    margin-bottom: 0;
+
+    .contents {
+      > div {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

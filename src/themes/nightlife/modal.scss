@@ -1,0 +1,30 @@
+.#{$theme} {
+  .ngdialog {
+    &.#{$namespace}modal {
+      .ngdialog-overlay {
+        background: $snow;
+      }
+
+      .ngdialog-close {
+        &::before {
+          color: $fog;
+        }
+
+        &:hover::before,
+        &:active::before {
+          color: $cloud;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $tablet) {
+    .ngdialog {
+      &.#{$namespace}modal {
+        .ngdialog-overlay {
+          background: $darken-4;
+        }
+      }
+    }
+  }
+}

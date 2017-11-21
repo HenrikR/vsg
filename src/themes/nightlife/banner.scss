@@ -1,0 +1,19 @@
+.#{$theme} {
+  .#{$namespace}banner {
+    background-color: $sky;
+
+    .contents {
+      background-color: rgba($sky, 0.85);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      color: $smoke;
+    }
+  }
+}

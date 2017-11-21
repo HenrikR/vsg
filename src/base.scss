@@ -1,0 +1,40 @@
+/* base styles */
+body {
+  background: $haze;
+  display: flex;
+  line-height: $line-height;
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
+/* border box all the things */
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* angular: utility classes */
+.ng-cloak,
+.ng-hide:not(.ng-hide-animate) {
+  display: none !important;
+}

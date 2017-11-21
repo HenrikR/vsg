@@ -1,0 +1,35 @@
+.#{$namespace}snow { color: $snow; }
+.#{$namespace}haze { color: $haze; }
+.#{$namespace}mist { color: $mist; }
+.#{$namespace}fog { color: $fog; }
+.#{$namespace}cloud { color: $cloud; }
+.#{$namespace}smoke { color: $smoke; }
+.#{$namespace}sky { color: $sky; }
+.#{$namespace}none { color: transparent; }
+
+.#{$namespace}b-snow { border-color: $snow; }
+.#{$namespace}b-haze { border-color: $haze; }
+.#{$namespace}b-mist { border-color: $mist; }
+.#{$namespace}b-fog { border-color: $fog; }
+.#{$namespace}b-cloud { border-color: $cloud; }
+.#{$namespace}b-smoke { border-color: $smoke; }
+.#{$namespace}b-sky { border-color: $sky; }
+.#{$namespace}b-none { border-color: transparent; }
+
+.#{$namespace}bg-snow { background-color: $snow; }
+.#{$namespace}bg-haze { background-color: $haze; }
+.#{$namespace}bg-mist { background-color: $mist; }
+.#{$namespace}bg-fog { background-color: $fog; }
+.#{$namespace}bg-cloud { background-color: $cloud; }
+.#{$namespace}bg-smoke { background-color: $smoke; }
+.#{$namespace}bg-sky { background-color: $sky; }
+.#{$namespace}bg-none { background-color: transparent; }
+
+.#{$namespace}fill-snow { fill: $snow; }
+.#{$namespace}fill-haze { fill: $haze; }
+.#{$namespace}fill-mist { fill: $mist; }
+.#{$namespace}fill-fog { fill: $fog; }
+.#{$namespace}fill-cloud { fill: $cloud; }
+.#{$namespace}fill-smoke { fill: $smoke; }
+.#{$namespace}fill-sky { fill: $sky; }
+.#{$namespace}fill-none { fill: none; }

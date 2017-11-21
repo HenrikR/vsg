@@ -1,0 +1,70 @@
+// takeover
+.#{$namespace}takeover {
+
+  .#{$namespace}takeover-toggle {
+    cursor: pointer;
+    line-height: 1;
+    position: relative;
+  }
+
+  .#{$namespace}takeover-content {
+    animation: slide-in-left 0.3s;
+    display: none;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+
+    .vnd-search-bar {
+      input {
+        background: $snow;
+        height: 2.75rem;
+      }
+
+      .v-absolute {
+        max-height: calc(50vh - 2.75rem);
+        -webkit-overflow-scrolling: touch;
+        overflow-y: scroll;
+      }
+    }
+
+    .vnd-icon {
+      display: none;
+    }
+  }
+
+  .vnd-icon {
+    font-size: 1rem;
+  }
+
+  &.is-v-takeover-opened {
+    .#{$namespace}takeover-toggle {
+      z-index: 3;
+    }
+
+    .#{$namespace}takeover-content {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $tablet + 0.0625em) {
+  .#{$namespace}takeover {
+    .vnd-icon {
+      font-size: 1.25rem;
+    }
+
+    .#{$namespace}takeover-content {
+      .vnd-search-bar {
+        input {
+          height: 3.875rem;
+        }
+
+        .v-absolute {
+          max-height: calc(100vh - 3.875rem);
+        }
+      }
+    }
+  }
+}
